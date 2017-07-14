@@ -1,0 +1,24 @@
+require.config({
+  baseUrl: '/node_modules',
+  paths: {
+    jquery: './jquery/dist/jquery',
+    cookie: './jquery.cookie/jquery.cookie',
+    nprogress: './nprogress/nprogress',
+    template: './art-template/lib/template-web',
+    bootstrap: './bootstrap/dist/js/bootstrap',
+    // 'datepicker', 'validate', 'form'
+    datepicker: './bootstrap-datepicker/dist/js/bootstrap-datepicker',
+    zh: './bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-CN.min',
+    validate: './jquery-validation/dist/jquery.validate',
+    form: './jquery-form/dist/jquery.form.min',
+    webuploader: './webuploader/dist/webuploader'
+  },
+  shim: {
+    bootstrap: {
+      deps: ['jquery'] //
+    },
+    zh: {
+      deps: ['jquery', 'datepicker']
+    }
+  }
+})
